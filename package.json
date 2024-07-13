@@ -5,12 +5,13 @@
   "private": true,
   "scripts": {
     "next-dev": "pnpm --filter=\"src-next\" dev",
-    "next-start": "cross-env BROWSER=none next src-next",
-    "next-build": "next build",
+    "next-start": "cross-env BROWSER=none pnpm --filter=\"src-next\" start",
+    "next-build": "pnpm --filter=\"src-next\" build",
+    "next-lint": "pnpm --filter=\"src-next\" lint",
+
     "tauri": "tauri",
-    "build": "tauri build",
+    "tauri-build": "tauri build",
     "dev": "tauri dev",
-    "lint": "next lint && biome check src-next/src",
     "prepare": "husky"
   },
   "keywords": [],
@@ -19,8 +20,10 @@
   "packageManager": "pnpm@9.5.0+sha512.140036830124618d624a2187b50d04289d5a087f326c9edfc0ccd733d76c4f52c3a313d4fc148794a2a9d81553016004e6742e8cf850670268a7387fc220c903",
   "devDependencies": {
     "@tauri-apps/cli": "^1.6.0",
+    "@typescript-eslint/eslint-plugin": "^7.16.0",
     "cross-env": "^7.0.3",
     "husky": "^9.0.11",
+    "serve": "^14.2.3",
     "typescript": "^5"
   }
 }

@@ -3,3 +3,5 @@
 ```bash
 pnpm add --filter="src-next" --save @tauri-apps/api 
 ```
+
+# tauri-next" 

@@ -11,7 +11,19 @@
   },
   "tauri": {
     "allowlist": {
-      "all": false
+      "all": true,
+      "window": {
+        "all": false,
+        "setAlwaysOnTop": true,
+        "close": true,
+        "hide": true,
+        "show": true,
+        "maximize": true,
+        "minimize": true,
+        "unmaximize": true,
+        "unminimize": true,
+        "startDragging": true
+      }
     },
     "bundle": {
       "active": true,
@@ -55,10 +67,13 @@
     "windows": [
       {
         "fullscreen": false,
-        "height": 600,
         "resizable": true,
-        "title": "src-tauri",
-        "width": 800
+        "height": 800,
+        "width": 1000,
+        "center": true,
+        "title": "coschip.dev",
+        "focus": true,
+        "decorations": false
       }
     ]
   }
